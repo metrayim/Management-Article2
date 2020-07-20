@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/master}">
+<head>
+
+    <title>ManagementController</title>
+
+</head>
+<body>
+
+<div class="container mt-5" layout:fragment="content">
+
+    <table  class="table">
+        <thead  class="secondary-color-dark white-text" >
+        <tr>
+            <th>
+                How
+            </th>
+            <th>
+                Know
+            </th>
+
+            <th>
+                Why
+            </th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+
+}
+
+ table {
+     border-collapse: collapse;
+     width: 100%;
+ }
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+li{
+    margin: 10px;
+}
+.He1{
+    text-align: center;
+}
+.nav-color{
+    background-color: #eccc68 !important;
+}
+.A-pa{
+    margin-left: 77px;
+}
+.BB-1{
+    background-color: aqua;
+
+
+}
+.for-footer{
+    left: 0px;
+    right: 0px
+
+}
+.card-body{
+    background-color: orange;
+}
+.filter{
+    display: flex;
+    flex-direction: row;
+}
+.filter_choose{
+    width: 200px;
+}

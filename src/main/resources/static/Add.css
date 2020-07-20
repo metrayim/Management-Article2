@@ -1,0 +1,37 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+
+
+}
+li{
+    margin: 10px;
+}
+.He1{
+    text-align: center;
+}
+.nav-color{
+    background-color: #eccc68 !important;
+}
+.A-pa{
+    margin-left: 77px;
+}
+.BB-1{
+    background-color: aqua;
+
+
+}
+.page-footer font-small blue{
+    margin-top: 193px;
+}
+.show-tile{
+    margin-top: 34px;
+    background-color: chartreuse;
+    text-align: center;
+}
+.style-color{
+    margin-top: 34px;
+    background-color: rebeccapurple;
+}

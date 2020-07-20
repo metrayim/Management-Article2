@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark  justify-content-between" classs="nav-color" style="background-color: #006266" th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+   <a class="navbar-brand" href="#" style="margin-left: 77px;" th:text="#{article-management}"> <i class="fas fa-graduation-cap"></i>Article Management</a>
+
+
+    <form class="form-inline my-1">
+        <div class="show">
+            <ul>
+                <li><i class="fas fa-home"></i> <a href="/"th:text="#{home}" style="color: wheat;"></a></li>
+                <li><i class="far fa-address-book"></i> <a href="/viewCategory"th:text="#{article}" style="color: wheat;">Aritcle</a></li>
+                <li><i class="fas fa-users"></i> <a  th:text="#{about-us}" style="color: wheat;">About us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" th:text="#{lang}" style="margin-top: -8px;color: wheat;"> </a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" th:href="@{?lang=en}" th:text="#{english}">English</a>
+                        <a class="dropdown-item" th:href="@{?lang=kh}" th:text="#{khmer}">Khmer</a>
+                        <a class="dropdown-item" th:href="@{?lang=ko}" th:text="#{korea}">Khmer</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+
+</nav>

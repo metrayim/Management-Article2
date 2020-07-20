@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/master}">
+<head>
+
+    <title>ManagementController</title>
+
+</head>
+<body>
+
+<div class="container mt-5 mb-4 " layout:fragment="content">
+    <div class="row">
+        <div clasa="col-2 mt-5">
+            <a href="/"​​​ > <button type="button" class="btn btn-info mt-5" th:text="#{back-home}">Secondary</button></a>
+        </div>
+
+        <div class="col-5">
+
+            <div class="card mt-5 mb-5">
+                <div class="card-body" >
+                    <h2 class="font-weight-bold deep-orange-lighter-hover mb-3 He1 " th:text="${isAdd}?'Add Article':'Update Article'">Card title</h2>
+                </div>
+            </div>
+
+
+
+            <form th:action="${isAdd}?'/add':'/update'" method="post" enctype="multipart/form-data" class="text-center border border-light p-5">
+
+
+                <input type="hidden" th:field="${article.id}" class="form-control display"  placeholder="ID"><span th:if="${#fields.hasErrors('article.id')}" style="color:red">this fill for field</span> <br><br>
+
+                <input type="text" th:field="${article.title}" class="form-control" placeholder="Title" ><span th:if="${#fields.hasErrors('article.title')}" style="color:red">this filed have to put please</span><br><br>
+
+                <input type="text" th:field="${article.author}" class="form-control" placeholder="Author"><span th:if="${#fields.hasErrors('article.author')}" style="color:red">this filed have to put please</span> <br><br>
+
+                <input type="text" th:field="${article.description}" class="form-control" placeholder="Description" ><span th:if="${#fields.hasErrors('article.description')}" style="color:red">this filed have to put please</span> <br><br>
+
+                <select th:field="${article.category.id}" class="browser-default custom-select">
+
+                    <option th:each="category:${categories}" th:value="${category.id}" th:text="${category.nameCategory}" >Open this select menu</option>
+
+                </select>
+
+
+
+                <div class="custom-file mt-5">
+                    <input type="file" name="file" class="custom-file-input" id="file" lang="es">
+                    <label class="custom-file-label" for="file" >Select Image</label>
+
+                </div>
+
+
+                <div>
+                    <!--                            <input type="submit" th:value="${isAdd}?'Submit':'Update Article'" class="style-color" >-->
+                    <button type="submit" class="btn btn-success" th:value="${isAdd}?'Submit':'Update Article'">Success</button>
+                </div>
+
+
+            </form>
+        </div>
+
+
+
+
+        <div class="col-5 mt-5">
+            <!-- Card -->
+            <div class="card-body" >
+                <h2 class="font-weight-bold deep-orange-lighter-hover mb-3 He1 " th:text="#{image-sh}">Card title</h2>
+            </div>
+            <div class="card mt-5">
+
+                <!-- Card image -->
+
+                <img class="card-img-top" id="sh-image"  alt="Article Image" src="">
+                <!-- Card content -->
+
+
+            </div>
+            <!-- Card -->
+            
+        </div>
+
+
+
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+
+
+</body>
+</html>

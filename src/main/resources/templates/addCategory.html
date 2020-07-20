@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/master}">
+<head>
+
+    <title>ManagementController</title>
+
+</head>
+<body>
+
+<div class="container mt-5 mb-4" layout:fragment="content">
+    <div class="row">
+        <div class="col-3"></div>
+
+
+
+        <div class="col-6">
+
+
+
+
+            <a href="/viewCategory"​​​ > <button type="button" class="btn btn-info mt-3" th:text="#{back-home}">Secondary</button></a>
+
+
+
+            <form  th:action="${isAdd}?'/addCategory':'/updateCategory'" method="post" enctype="multipart/form-data">
+
+
+
+                <input type="hidden" th:field="${categoris.id}" class="form-control display"  placeholder="Add category"> <br><br>
+                <input type="text" th:field="${categoris.nameCategory}" class="form-control display"  placeholder="Add category"> <br><br>
+
+
+
+
+                <button type="submit" class="btn btn-success" th:value="${isAdd}?'Submit':'Update Article'">Success</button>
+
+
+            </form>
+        </div>
+
+
+
+
+        <div class="col-3 "></div>
+
+
+
+    </div>
+</div>
+</body>
+</html>
